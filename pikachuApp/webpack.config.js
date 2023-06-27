@@ -26,9 +26,9 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: './src/style.css' }],
-    // }),
+    new CopyPlugin({
+      patterns: [{ from: './src/style.css' }],
+    }),
   ],
   devServer: {
     static: {
