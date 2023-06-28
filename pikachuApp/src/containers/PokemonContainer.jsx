@@ -1,25 +1,24 @@
 import React from 'react';
 
 export default function PokemonContainer(props) {
-  // Deconstruct Props
-  const { pokemonImg, pokemonInfo } = props;
-  // Life Cycle
-  // Handle Methods
+  // Deconstruct the props/Initialize State
+  const { pokemonImg, pokemonInfo, pokemonName } = props;
+  // LifeCycle Method
+
+  // Handle Method
+
   // Render
-  if (!pokemonImg) return <h3>Please submit a pokemon</h3>;
+  if (!pokemonName) return <h3>Please input POKEMON name</h3>;
   return (
-    <div id="pokemon-container">
-      <h3>Pikachu</h3>
+    <div id="user-input">
+      <h3>{pokemonName}</h3>
       <img src={pokemonImg} alt="Pokemon Picture" />
-      <div id="pokemon-information">
-        <h3>Information</h3>
-        <ul>
-          {pokemonInfo.map((info, i) => (
-            <li key={i}>{info}</li>
-          ))}
-        </ul>
-      </div>
+      <h3>Information</h3>
+      <ul>
+        {pokemonInfo.map((text, i) => (
+          <li key={i}>{text}</li>
+        ))}
+      </ul>
     </div>
   );
 }
-// Export
